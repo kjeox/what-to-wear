@@ -28,10 +28,17 @@ import { LoginRedirect } from "./components/auth/LoginRedirect";
 import { ColorModeContextProvider, ColorModeContext } from "./contexts/color-mode";
 import {AppSettingsProvider, useAppSettings} from "./contexts/app-settings";
 import { useContext, useRef, useEffect } from "react";
-import { Home } from "./pages/home";
 import { Login } from "./pages/login";
 import { AuthCheckPending } from "./components/auth/AuthCheckPending";
 import { useNavkitProfileMenuItems } from "./navkit/useNavkitProfileMenuItems";
+import { AskPage } from "./pages/ask";
+import { WardrobeList } from "./pages/wardrobe";
+import { OutfitsList } from "./pages/outfits";
+import { HistoryList } from "./pages/history";
+import QuestionAnswerRoundedIcon from "@mui/icons-material/QuestionAnswerRounded";
+import CheckroomRoundedIcon from "@mui/icons-material/CheckroomRounded";
+import StyleRoundedIcon from "@mui/icons-material/StyleRounded";
+import HistoryRoundedIcon from "@mui/icons-material/HistoryRounded";
 
 const AppContent = () => {
   const { setMode } = useContext(ColorModeContext);
@@ -90,7 +97,26 @@ const AppContent = () => {
                 authProvider={taruviAuthProvider}
                 // accessControlProvider={taruviAccessControlProvider} // Uncomment to enable Cerbos-based access control
                 resources={[
-                  // Add your resources here
+                  {
+                    name: "ask",
+                    list: "/",
+                    meta: { label: "Ask", icon: <QuestionAnswerRoundedIcon /> },
+                  },
+                  {
+                    name: "wardrobe_items",
+                    list: "/wardrobe",
+                    meta: { label: "My Wardrobe", icon: <CheckroomRoundedIcon /> },
+                  },
+                  {
+                    name: "outfits",
+                    list: "/outfits",
+                    meta: { label: "Outfits", icon: <StyleRoundedIcon /> },
+                  },
+                  {
+                    name: "suggestion_requests",
+                    list: "/history",
+                    meta: { label: "History", icon: <HistoryRoundedIcon /> },
+                  },
                 ]}
                 options={{
                   syncWithLocation: true,
@@ -134,7 +160,10 @@ const AppContent = () => {
                       </Authenticated>
                     }
                   >
-                    <Route index element={<Home />} />
+                    <Route index element={<AskPage />} />
+                    <Route path="/wardrobe" element={<WardrobeList />} />
+                    <Route path="/outfits" element={<OutfitsList />} />
+                    <Route path="/history" element={<HistoryList />} />
                     <Route path="*" element={<ErrorComponent />} />
                   </Route>
                 </Routes>
