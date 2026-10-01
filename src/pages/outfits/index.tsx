@@ -56,7 +56,7 @@ export const OutfitsList = () => {
   const { result: outfitItemsResult, query: outfitItemsQuery } = useList<OutfitItemRow>({
     resource: "outfit_items",
     meta: { populate: ["wardrobe_item_id"] },
-    pagination: { pageSize: 500 },
+    pagination: { pageSize: 100 },
   });
 
   const { mutate: deleteOutfit } = useDelete();

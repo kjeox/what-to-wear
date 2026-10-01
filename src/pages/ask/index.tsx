@@ -29,7 +29,7 @@ export const AskPage = () => {
 
   const { result: wardrobeResult, query: wardrobeQuery } = useList<WardrobeItem>({
     resource: "wardrobe_items",
-    pagination: { pageSize: 500 },
+    pagination: { pageSize: 100 },
   });
 
   const { mutateAsync: createRequest } = useCreate();
