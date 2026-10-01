@@ -24,13 +24,13 @@ List of past suggestion requests and chosen outfits.
 
 - [x] Create TaruviBase schema: wardrobe_items, outfits, outfit_items, suggestion_requests
 - [x] Seed 30 wardrobe items, 3 outfits, 5 suggestion history entries
-- [ ] Register Refine resources + sidebar icons (in progress)
-- [ ] Build rule-based outfit matching engine (pure TS)
-- [ ] Build Ask page + results
-- [ ] Build My Wardrobe page
-- [ ] Build Outfits page
-- [ ] Build History page
-- [ ] Deploy and verify
+- [x] Register Refine resources + sidebar icons
+- [x] Build rule-based outfit matching engine (pure TS)
+- [x] Build Ask page + results
+- [x] Build My Wardrobe page
+- [x] Build Outfits page
+- [x] Build History page
+- [x] Deploy and verify
 
 ---
 

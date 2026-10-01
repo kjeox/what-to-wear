@@ -124,7 +124,7 @@ export const AskPage = () => {
   return (
     <PageContainer maxWidth="lg">
       <Box sx={{ mb: 3 }}>
-        <Typography variant="h2">Ask</Typography>
+        <Typography variant="h2">What should I wear?</Typography>
         <Typography variant="body2" color="text.secondary">
           Tell us about your plans and we'll put an outfit together from your own wardrobe.
         </Typography>

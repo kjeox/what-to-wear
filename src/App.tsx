@@ -23,7 +23,7 @@ import {
   taruviUserProvider,
   // taruviAccessControlProvider, // Uncomment to enable Cerbos-based access control
 } from "./providers/refineProviders";
-import { CustomSider, ErrorBoundary, UnsavedChangesDialog } from "./components";
+import { AppFooter, CustomSider, ErrorBoundary, UnsavedChangesDialog } from "./components";
 import { LoginRedirect } from "./components/auth/LoginRedirect";
 import { ColorModeContextProvider, ColorModeContext } from "./contexts/color-mode";
 import {AppSettingsProvider, useAppSettings} from "./contexts/app-settings";
@@ -151,10 +151,21 @@ const AppContent = () => {
                           initialSiderCollapsed={true}
                           childrenBoxProps={{ sx: { p: 0 } }}
                         >
-                          <Box sx={{ ml: { xs: 0, md: '72px' }, transition: 'margin-left 0.2s ease-in-out' }}>
-                            <ErrorBoundary>
-                              <Outlet />
-                            </ErrorBoundary>
+                          <Box
+                            sx={{
+                              ml: { xs: 0, md: '72px' },
+                              transition: 'margin-left 0.2s ease-in-out',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              minHeight: '100vh',
+                            }}
+                          >
+                            <Box sx={{ flex: 1 }}>
+                              <ErrorBoundary>
+                                <Outlet />
+                              </ErrorBoundary>
+                            </Box>
+                            <AppFooter />
                           </Box>
                         </ThemedLayout>
                       </Authenticated>
