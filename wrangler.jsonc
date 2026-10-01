@@ -1,0 +1,11 @@
+{
+	// Static Vite SPA served via Workers Assets. The dev preview runs `vite
+	// dev` inside the platform sandbox; this config is used only when the app
+	// is deployed to Cloudflare.
+	"name": "taruvi-refine-vite-app",
+	"compatibility_date": "2025-04-01",
+	"assets": {
+		"directory": "./dist",
+		"not_found_handling": "single-page-application"
+	}
+}
