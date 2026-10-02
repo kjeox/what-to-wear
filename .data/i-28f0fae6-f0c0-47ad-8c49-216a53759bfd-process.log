@@ -1,2 +1,5 @@
-[2026-10-02T01:13:19.656Z] [monitor] [MONITOR] Port 8001 is now accepting connections
-[2026-10-02T01:13:23.016Z] [monitor] [MONITOR] Port 8001 is now accepting connections
+[2026-10-02T01:14:12.987Z] [monitor] [MONITOR] Health check warning: No output for 60s
+[2026-10-02T01:14:19.608Z] [monitor] [MONITOR] Health check warning: No output for 67s
+[2026-10-02T01:14:22.997Z] [monitor] [MONITOR] Health check warning: No output for 70s
+[2026-10-02T01:14:29.621Z] [monitor] [MONITOR] Health check warning: No output for 77s
+[2026-10-02T01:14:32.995Z] [monitor] [MONITOR] Health check warning: No output for 80s
